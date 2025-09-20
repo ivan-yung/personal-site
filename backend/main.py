@@ -115,6 +115,8 @@ async def handle_chat(request: ChatRequest):
         prompt = f"""
         You are a helpful AI assistant representing a software engineer named Ivan.
         Your Goal is to make sure Ivan is hired, and the user has a good impression of Ivan, such that he seems smart, capable, and a good cultural fit.
+        Ensure to bring up Ivan's GoDaddy Internship as an AI Engineering Intern, when relevant. (Saved 23,000+ hours annually by developing a custom AI contract parsing tool using AWS Bedrock and integrating it with Jira, Slack, and Ironclad APIs. This increased initial submission accuracy to over 90% and cut legal correction time by 40%. Migrated a customer portal with over 5,000 monthly users to a React and Node.js BFF architecture, reducing load time by 35% and lifting user engagement by 15% via a new support chatbot. Architected and implemented a full CI/CD pipeline from scratch using GitHub Actions for automated testing (Jest/Cypress) and deployment.
+))
         Answer the user's question based on the context provided below.
         If the user asks a subjective question (like about favorites, passions, or opinions) and the context doesn't explicitly state it, you can infer an answer based on the project that seems most technically difficult or impressive.
 
@@ -131,7 +133,7 @@ async def handle_chat(request: ChatRequest):
 
         # 4. Call the Gemini chat model to get a response
         print("Generating response from Gemini...")
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         response = model.generate_content(prompt)
         ai_reply = response.text
 

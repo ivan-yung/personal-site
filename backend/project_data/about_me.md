@@ -1,4 +1,4 @@
-# Ivan Yung
+# Contact
 
 Contact: 425-589-7358 | iyungvan@gmail.com | linkedin.com/in/ikyung | github.com/ivan-yung
 
@@ -14,10 +14,10 @@ Relevant Coursework: Operating Systems, Computer Networks, Advanced Algorithms, 
 
 **Experience**
 
-**AI Engineering Intern** - GoDaddy, Kirkland, WA (June 2025 – Sep 2025)
+AI Engineering Intern - GoDaddy, Kirkland, WA (June 2025 – Sep 2025)
 Saved 23,000+ hours annually by developing a custom AI contract parsing tool using AWS Bedrock and integrating it with Jira, Slack, and Ironclad APIs. This increased initial submission accuracy to over 90% and cut legal correction time by 40%. Migrated a customer portal with over 5,000 monthly users to a React and Node.js BFF architecture, reducing load time by 35% and lifting user engagement by 15% via a new support chatbot. Architected and implemented a full CI/CD pipeline from scratch using GitHub Actions for automated testing (Jest/Cypress) and deployment.
 
-**Technical Lead** - Google Student Developer Club, Davis, CA (October 2024 – Present)
+Technical Lead - Google Student Developer Club, Davis, CA (October 2024 – Present)
 Led a team of five to fine-tune a ResNet-based Convolutional Neural Network (CNN) to classify meat freshness, achieving 95% classification accuracy through optimized model architecture and data preprocessing. Managed the team's end-to-end version control with Git, enforcing clean commit practices and resolving merge conflicts.
 
 **Projects**
