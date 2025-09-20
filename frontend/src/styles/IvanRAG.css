@@ -1,0 +1,219 @@
+/* Modern, ENCAPSULATED styles for the IvanRAG chat component.
+  No global selectors (:root, body) or CSS variables are used.
+*/
+
+/* Base animation for messages appearing */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typing indicator animation */
+@keyframes typing-dot {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-4px); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(0); }
+}
+
+.ivanrag-root {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 80vh; /* Make it taller */
+  max-height: 800px;
+  overflow: hidden;
+}
+
+.ivanrag-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.ivanrag-title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1a1a1a;
+}
+
+.ivanrag-clear-button {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.ivanrag-clear-button:hover {
+  color: #007bff;
+}
+
+.ivanrag-list {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.ivanrag-empty {
+  color: #888;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ivanrag-message-row {
+  display: flex;
+  margin-bottom: 16px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.ivanrag-message-row.user {
+  justify-content: flex-end;
+}
+
+.ivanrag-message-row.bot {
+  justify-content: flex-start;
+}
+
+.ivanrag-bubble {
+  max-width: 85%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.ivanrag-bubble.user {
+  background: linear-gradient(135deg, #007bff, #8a2be2);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.ivanrag-bubble.bot {
+  background: #f0f0f0;
+  color: #1a1a1a;
+  border-bottom-left-radius: 4px;
+}
+
+.ivanrag-sender {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+/* Typing Indicator Styling */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+.typing-indicator span {
+  width: 7px;
+  height: 7px;
+  margin: 0 2px;
+  background-color: #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  animation: typing-dot 1.2s infinite;
+}
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+
+.ivanrag-controls {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid #e5e5e5;
+  background: #ffffff;
+}
+
+.ivanrag-textarea {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  resize: none;
+  font-family: inherit;
+  font-size: 1rem;
+  min-height: 48px;
+  max-height: 200px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ivanrag-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.ivanrag-send-button {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.ivanrag-send-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.ivanrag-send-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.ivanrag-send-button:disabled {
+  background-color: #cdd2d8;
+  cursor: not-allowed;
+}
+
+.ivanrag-send-icon {
+  stroke: white;
+}
+
+.ivanrag-send-icon.disabled {
+  stroke: #888;
+}
+
+.ivanrag-error {
+  margin: 0 24px 16px 24px;
+  padding: 12px;
+  background-color: rgba(217, 83, 79, 0.1);
+  color: #d9534f;
+  border-radius: 8px;
+  border: 1px solid rgba(217, 83, 79, 0.2);
+}
+
+.ivanrag-hint {
+  font-size: 0.8rem;
+  margin-top: 4px;
+  opacity: 0.8;
+}
