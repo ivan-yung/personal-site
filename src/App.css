@@ -1,0 +1,121 @@
+.pill-nav {
+	position: sticky;
+	top: 0;
+	z-index: 40;
+	display: flex;
+	justify-content: center;
+	padding: 0.7rem 1rem;
+	backdrop-filter: blur(8px);
+	background: rgba(8, 12, 20, 0.62);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pill-nav-track {
+	display: flex;
+	gap: 0.55rem;
+	max-width: min(100%, 52rem);
+	padding: 0.25rem;
+	border-radius: 999px;
+	background: rgba(12, 18, 28, 0.8);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	overflow-x: auto;
+	scrollbar-width: none;
+}
+
+.pill-nav-track::-webkit-scrollbar {
+	display: none;
+}
+
+.pill-nav-link {
+	flex: 0 0 auto;
+	padding: 0.5rem 0.95rem;
+	border-radius: 999px;
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-decoration: none;
+	color: #dcecff;
+	border: 1px solid transparent;
+	transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.pill-nav-link:hover {
+	background: rgba(80, 132, 208, 0.24);
+	border-color: rgba(164, 203, 255, 0.35);
+}
+
+#top,
+#projects,
+#about {
+	scroll-margin-top: 5.4rem;
+}
+
+.app-shell {
+	--viewer-scroll-length: 170vh;
+	height: var(--viewer-scroll-length);
+	background:
+		radial-gradient(circle at 25% 20%, rgba(101, 132, 181, 0.1), transparent 52%),
+		radial-gradient(circle at 78% 62%, rgba(30, 177, 152, 0.08), transparent 48%),
+		#0d1117;
+	color: #e6edf3;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.canvas-wrap {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+}
+
+.canvas-wrap canvas {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.overlay {
+	position: absolute;
+	left: 2rem;
+	bottom: 2rem;
+	max-width: 20rem;
+	padding: 1rem 1.25rem;
+	background: rgba(12, 16, 24, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 0.75rem;
+	backdrop-filter: blur(3px);
+}
+
+.overlay h1 {
+	margin: 0;
+	font-size: 1.5rem;
+	letter-spacing: 0.04em;
+}
+
+.overlay p {
+	margin: 0.5rem 0 0;
+	line-height: 1.4;
+}
+
+.scroll-space {
+	height: max(0px, calc(var(--viewer-scroll-length) - 100vh));
+}
+
+@media (max-width: 640px) {
+	.pill-nav {
+		padding: 0.6rem 0.65rem;
+	}
+
+	.pill-nav-track {
+		width: 100%;
+	}
+
+	.pill-nav-link {
+		padding: 0.48rem 0.82rem;
+		font-size: 0.84rem;
+	}
+
+	.overlay {
+		left: 1rem;
+		right: 1rem;
+		bottom: 1rem;
+		max-width: none;
+	}
+}
