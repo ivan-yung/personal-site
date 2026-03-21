@@ -53,9 +53,23 @@
 	--viewer-scroll-length: 170vh;
 	height: var(--viewer-scroll-length);
 	background:
-		radial-gradient(circle at 25% 20%, rgba(101, 132, 181, 0.1), transparent 52%),
-		radial-gradient(circle at 78% 62%, rgba(30, 177, 152, 0.08), transparent 48%),
-		#0d1117;
+		repeating-linear-gradient(
+			0deg,
+			rgba(0, 170, 0, 0.02) 0,
+			rgba(0, 170, 0, 0.02) 1px,
+			transparent 1px,
+			transparent 2px
+		),
+		repeating-linear-gradient(
+			90deg,
+			rgba(0, 170, 0, 0.02) 0,
+			rgba(0, 170, 0, 0.02) 1px,
+			transparent 1px,
+			transparent 2px
+		),
+		radial-gradient(circle at 25% 20%, rgba(0, 120, 60, 0.08), transparent 52%),
+		radial-gradient(circle at 78% 62%, rgba(0, 100, 120, 0.06), transparent 48%),
+		#0a0e14;
 	color: #e6edf3;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

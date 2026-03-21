@@ -1,28 +1,31 @@
 
 import ProjectsCard from './ProjectsCard'
+import vibwebpng from '../assets/vib-web.png'
+import vibwebmp4 from '../assets/optimized-vib-web.webm'
+import logisim from '../assets/logisim.png'
+import logisimmp4 from '../assets/optimized-logisim.webm'
 import './Projects.css'
 
 const projects = [
   {
-    title: 'PSOC6 BLE Telemetry Node',
+    title: 'Vib-Web',
     description:
-      'Firmware and dashboard stack for streaming sensor data over BLE with low-latency packet handling and real-time status panels.',
-    tech: ['C', 'FreeRTOS', 'BLE', 'React', 'TypeScript'],
-    videoSrc: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
-    imageSrc:
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
-    repoUrl: '#',
+      'A frontend drag and drop website code Generator. Create a wireframe, generate, and compile without leaving the webpage.',
+    tech: ['React', 'TS', 'GO', 'GCP'],
+    videoSrc: vibwebmp4,
+    imageSrc: vibwebpng,
+    liveUrl: 'https://vib-web.web.app/',
+    repoUrl: 'https://github.com/ivan-yung/webgen',
   },
   {
-    title: 'Full Stack Portfolio Platform',
+    title: 'Logi-Sim',
     description:
-      'Portfolio site with interactive 3D hero section, project indexing, and responsive content blocks tuned for performance.',
-    tech: ['React', 'Vite', 'Three.js', 'CSS'],
-    videoSrc: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm',
-    imageSrc:
-      'https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&w=1200&q=80',
-    liveUrl: '#',
-    repoUrl: '#',
+      'Digital Circuit Simulator: Simulate gate level logic with accuracy and precision in a fun web format',
+    tech: ['React'],
+    videoSrc: logisimmp4,
+    imageSrc: logisim,
+    liveUrl: 'https://logi-sim.web.app/',
+    repoUrl: 'https://github.com/ivan-yung/logi-sim',
   },
   {
     title: 'Embedded Device Test Bench',
@@ -41,9 +44,12 @@ export default function Projects() {
     <section className="projects-section snap-section" id="projects" aria-labelledby="projects-heading">
       <div className="projects-content">
         <p className="projects-eyebrow">True Full Stack.</p>
-        <h2 className="projects-heading" id="projects-heading">
-          Projects
-        </h2>
+        <div className="heading-with-cursor">
+          <h2 className="projects-heading" id="projects-heading">
+            Products
+          </h2>
+          <div className="terminal-cursor"></div>
+        </div>
         <p className="projects-intro">
           AI Powered Web tools, circuit simulators, IOT Embedded devices.
         </p>
