@@ -33,7 +33,7 @@ const experiences = [
 const education = [
   {
     school: 'University of California Davis',
-    program: 'BASc, Computer Engineering',
+    program: 'BS, Computer Engineering',
     dates: '2022-2026',
     location: 'Davis, CA',
     highlights: [

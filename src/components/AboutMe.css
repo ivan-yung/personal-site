@@ -58,14 +58,12 @@
 .education-card {
 	padding: 1.3rem;
 	border-radius: 2px;
-	border: 2px solid #0088aa;
 	background: #0a0e14;
-	transition: border-color 200ms ease;
+	transition: background 200ms ease;
 }
 
 .experience-card:hover,
 .education-card:hover {
-	border-color: #0088aa;
 	background: #0f1419;
 }
 
