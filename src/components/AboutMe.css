@@ -80,6 +80,32 @@
 	font-size: 1.2rem;
 }
 
+.company-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: #8bc7ff;
+	text-decoration: none;
+	transition: color 200ms ease, transform 200ms ease;
+}
+
+.company-link:hover {
+	color: #00d4ff;
+	transform: translateX(2px);
+}
+
+.external-icon {
+	width: 1.1em;
+	height: 1.1em;
+	display: inline-block;
+	flex-shrink: 0;
+	transition: transform 200ms ease;
+}
+
+.company-link:hover .external-icon {
+	transform: translate(2px, -2px);
+}
+
 .experience-position,
 .education-program {
 	margin: 0;

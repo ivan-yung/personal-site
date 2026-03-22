@@ -4,38 +4,40 @@ import './AboutMe.css'
 
 const experiences = [
   {
-    company: 'TechNova Systems',
-    position: 'Embedded Software Engineer',
-    dates: 'May 2023 - Present',
-    location: 'Toronto, ON',
+    company: 'CodeLab - Google',
+    companyUrl: 'https://codelabdavis.com/',
+    position: 'Contract Software Engineer - Google Careers Platform',
+    dates: 'Jan 2026 - Present',
+    location: 'Davis, CA',
     accomplishments: [
-      'Designed BLE communication workflows that reduced telemetry packet loss by 22% during stress testing.',
-      'Built board bring-up scripts and diagnostics to accelerate validation cycles for new hardware revisions.',
-      'Partnered with product and QA teams to define test plans and release criteria for firmware milestones.',
+      'Selected for a 6-month software engineering contract through CodeLab supporting feature development for the Google Careers platform.',
+      'Contributed to production feature development, focusing on user-facing improvements to job discovery and location-based experiences.',
+      'Engineered and optimized scalable, user-facing web components using React, TypeScript, and Go-based services, ensuring high performance for a global user base.',
     ],
   },
   {
-    company: 'Nexa Logic Labs',
-    position: 'Full Stack Developer Intern',
-    dates: 'Jan 2022 - Apr 2023',
-    location: 'Waterloo, ON',
+    company: 'GoDaddy',
+    companyUrl: 'https://godaddy.com',
+    position: 'AI Engineering Intern',
+    dates: 'June 2025 - September 2025',
+    location: 'Kirkland, WA',
     accomplishments: [
-      'Developed React dashboards for device monitoring with role-based access and live status modules.',
-      'Implemented backend endpoints and data pipelines used for operational reporting across multiple teams.',
-      'Improved page load and API response performance through query optimization and client-side caching.',
+      'Contributed to the fullstack migration of a customer-facing portal (5K+ monthly users) to React and Next.js, collaborating across frontend, backend, and DevOps to ensure production readiness.',
+      'Built an AI contract parsing tool (AWS Bedrock + Jira/Slack/Ironclad), estimated to save 23K+ hours annually by cutting 15 min per review.',
+      'Lifted user engagement by 15% through the integration of a new support chatbot (verified through A/B testing).',
+      'Implemented GitHub Actions workflows for testing (Jest/Cypress), linting, building, and deploying using GoDaddy’s internal CI/CD tools, automating team processes.'
     ],
   },
 ]
 
 const education = [
   {
-    school: 'University of Waterloo',
+    school: 'University of California Davis',
     program: 'BASc, Computer Engineering',
-    dates: '2019 - 2024',
-    location: 'Waterloo, ON',
+    dates: '2022-2026',
+    location: 'Davis, CA',
     highlights: [
-      'Coursework: Embedded Systems, Digital Logic, Real-Time Operating Systems, and Computer Networks.',
-      'Capstone project focused on wireless sensing and low-power edge processing.',
+      'Coursework: Embedded Systems, Digital Circuits, Operating Systems, Computer Networks, VLSI design, DSP, Analog Circuits',
     ],
   },
 ]

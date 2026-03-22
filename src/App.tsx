@@ -45,10 +45,10 @@ function App() {
           <a className="pill-nav-link" href="#about" onClick={(event) => handleSectionNavClick(event, 'about')}>
             About Me
           </a>
-          <a className="pill-nav-link" href="https://github.com" target="_blank" rel="noreferrer">
+          <a className="pill-nav-link" href="https://github.com/ivan-yung" target="_blank" rel="noreferrer">
             GitHub
           </a>
-          <a className="pill-nav-link" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+          <a className="pill-nav-link" href="https://www.linkedin.com/in/ikyung" target="_blank" rel="noreferrer">
             LinkedIn
           </a>
         </nav>

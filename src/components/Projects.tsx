@@ -1,9 +1,13 @@
 
 import ProjectsCard from './ProjectsCard'
 import vibwebpng from '../assets/vib-web.png'
-import vibwebmp4 from '../assets/optimized-vib-web.webm'
+import VibWebWebm from '../assets/optimized-vib-web.webm'
 import logisim from '../assets/logisim.png'
-import logisimmp4 from '../assets/optimized-logisim.webm'
+import LogisimWebm from '../assets/optimized-logisim.webm'
+import psoc6png from '../assets/psoc6.png'
+import b3Webm from '../assets/optimized-b3.webm'
+import b3Png from '../assets/b3.png'
+import freshDetectPng from '../assets/freshDetect.png'
 import './Projects.css'
 
 const projects = [
@@ -12,7 +16,7 @@ const projects = [
     description:
       'A frontend drag and drop website code Generator. Create a wireframe, generate, and compile without leaving the webpage.',
     tech: ['React', 'TS', 'GO', 'GCP'],
-    videoSrc: vibwebmp4,
+    videoSrc: VibWebWebm,
     imageSrc: vibwebpng,
     liveUrl: 'https://vib-web.web.app/',
     repoUrl: 'https://github.com/ivan-yung/webgen',
@@ -21,21 +25,38 @@ const projects = [
     title: 'Logi-Sim',
     description:
       'Digital Circuit Simulator: Simulate gate level logic with accuracy and precision in a fun web format',
-    tech: ['React'],
-    videoSrc: logisimmp4,
+    tech: ['React', 'Directed Graphs'],
+    videoSrc: LogisimWebm,
     imageSrc: logisim,
     liveUrl: 'https://logi-sim.web.app/',
     repoUrl: 'https://github.com/ivan-yung/logi-sim',
   },
   {
-    title: 'Embedded Device Test Bench',
+    title: 'Fresh Detect',
     description:
-      'Automated hardware validation toolchain for serial diagnostics, regression capture, and pass-fail test reporting.',
-    tech: ['Python', 'PySerial', 'Node.js', 'SQLite'],
-    imageSrc:
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+      'ML powered meat freshness detection app. A fine tuned CNN in an h5 file ran by a flask server predicts the freshness of meat on a gradient from fresh to spoiled.',
+    tech: ['Computer Vision', 'Python', 'Flask', 'Fine tuning', 'React'],
+    imageSrc: freshDetectPng,
+    repoUrl: 'https://github.com/GDSC-UCD-Cohort-24-25/freshdetect',
     mediaMode: 'image' as const,
-    repoUrl: '#',
+  },
+  {
+    title: 'PSOC Based Fit bit',
+    description:
+      'Designed custom PSoC 63 BLE 5.0 module (CYBLE-416045-02) boards, and firmware interfacing LIS3DH accellerometer to track real time motion and fitness statistics.',
+    tech: ['Altium Designer', 'C', 'Serial Communication Protocols', 'PSOC6'],
+    imageSrc:
+      psoc6png,
+    mediaMode: 'image' as const,
+  },
+  {
+    title: 'IOT Embedded Bike Tracker',
+    description:
+      'TI CC3200 wifi SOC microcontroller interfacing with GPS, AWS IOT shadow, and accelerometer to provide real time location data and bike speed statistics onto acompanying web app',
+    tech: ['IOT', 'Serial COmmunication Protocols', 'C++', 'AWS', 'React', 'GO'],
+    imageSrc:
+      b3Png,
+    videoSrc: b3Webm,
   },
 ]
 
@@ -46,7 +67,7 @@ export default function Projects() {
         <p className="projects-eyebrow">True Full Stack.</p>
         <div className="heading-with-cursor">
           <h2 className="projects-heading" id="projects-heading">
-            Products
+            Projects
           </h2>
           <div className="terminal-cursor"></div>
         </div>
